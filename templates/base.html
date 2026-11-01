@@ -18,8 +18,12 @@
         <hr>
         <nav>
             <ul>
-                <li> <a href="{{url_for('index')}}">Home </a> </li>
-                <li> <a href="{{url_for('t1')}}">Task 1 </a> </li>
+                <li> <a href="{{url_for('index')}}" class="{{ 'active' if active_page == 'home' else '' }}">Home </a>
+                </li>
+                <li> <a href="{{url_for('t1')}}" class="{{ 'active' if active_page == 't1' else '' }}">Task 1 </a>
+                </li>
+                <li> <a href="{{url_for('t2')}}" class="{{ 'active' if active_page == 't2' else '' }}">Task 2 </a>
+                </li>
             </ul>
         </nav>
     </header>
