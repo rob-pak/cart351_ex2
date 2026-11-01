@@ -60,9 +60,11 @@ nav li a {
 
 main {
     margin-top: 2rem;
+    margin-bottom: 2rem;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
+    min-height: 75dvh;
 }
 
 h2,
@@ -75,7 +77,7 @@ h3 {
 .btn {
     cursor: pointer;
     padding: 0.75rem 2rem;
-    border-radius: 99rem;
+    border-radius: 4px;
     background-color: var(--light);
     color: var(--black);
     border: none;
@@ -121,5 +123,13 @@ label {
     margin-bottom: 0.5rem;
 }
 
+.img-card p {
+    color: var(--gray);
+    font-size: 0.875rem;
+    max-width: 75%;
+    letter-spacing: 0;
+    line-height: 1.25;
+    margin-top: 0.5rem;
+}
 
 footer {}

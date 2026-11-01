@@ -7,7 +7,8 @@
     <fieldset>
       <p>
         <label for="query">Search NASA Images</label>
-        <input id="query" type="text" size="24" maxlength="64" name="query" placeholder="moon landing" required>
+        <input id="query" type="text" size="24" maxlength="64" name="query" placeholder="moon landing" class="autofocus"
+          required>
       </p>
       <p>
         <input id="submit" type="submit" value="Search" class="btn">
@@ -18,10 +19,12 @@
 
 
 <section id="results">
-  <h3>Results</h3>
   {% if have_results %}
-  <img src="{{imgPath}}">
-  <p>{{description}}</p>
+  <h3>Results</h3>
+  <div class="img-card">
+    <img src="{{imgPath}}">
+    <p>{{description}}</p>
+  </div>
   {% endif %}
 </section>
 {% endblock %}
