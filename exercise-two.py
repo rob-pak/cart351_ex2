@@ -20,9 +20,21 @@ def getSearchCriteria():
     #replace the empty space to be url encoded
     imgFromNasa = request.args["query"]
     imgFromNasa = imgFromNasa.replace(' ', '%20')
+
+    # api request, limit to first image
+    url = f"https://images-api.nasa.gov/search?q={imgFromNasa}&media_type=image&page_size=1"
+    response = requests.get(url)
+    data = response.json()
+    description = ""
+    images = data["collection"]["items"]
+    print(images)
+    if images:
+        description = images[0]["data"][0]["description"]
+        imgFromNasa = images[0]["links"][0]["href"]
+    
     return render_template("t1.html",
                               have_results = True,
-                            #   description=description,
+                              description=description,
                               imgPath = imgFromNasa
                            )
     pass
