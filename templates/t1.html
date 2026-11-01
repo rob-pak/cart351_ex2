@@ -22,8 +22,12 @@
 <section id="results">
   {% if have_results %}
   <h3>Results</h3>
-  <div class="img-card">
-    <img src="{{imgPath}}">
+  <div class="container">
+    <a href="{{imgPath}}">
+      <div class="img-card">
+        <img src="{{imgPath}}">
+      </div>
+    </a>
     <p>{{description}}</p>
   </div>
   {% endif %}
