@@ -11,8 +11,8 @@ def index():
 #*************************************************
 #Task-1: GET REQUEST
 @app.route("/t1")
-# def t1():
-#     return render_template("t1.html",have_results=False)
+def t1():
+    return render_template("t1.html",have_results=False)
 #*************************************************
 @app.route("/getSearchCriteria")
 def getSearchCriteria():
